@@ -24,7 +24,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/products")
-    public ResponseEntity<Page<Product>> getProduct(
+    public ResponseEntity<Page<Product>> getProducts(
             //查詢條件 Filtering
             @RequestParam(required = false) ProductCategory category,
             @RequestParam(required = false) String search,

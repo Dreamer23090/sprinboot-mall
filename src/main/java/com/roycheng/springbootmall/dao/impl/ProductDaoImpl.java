@@ -134,7 +134,7 @@ public class ProductDaoImpl implements ProductDao {
         namedParameterJdbcTemplate.update(sql,map);
     }
 
-    private String addFilteringSql(String sql, Map<String,Object> map, ProductQueryParams productQueryParams){
+    private String addFilteringSql(String sql, Map<String,Object> map , ProductQueryParams productQueryParams){
         if (productQueryParams.getCategory() != null){
             sql = sql + " AND category = :category";
             map.put("category", productQueryParams.getCategory().name());
